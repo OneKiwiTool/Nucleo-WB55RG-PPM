@@ -14,3 +14,5 @@ $$Update\_event=\dfrac{TIM\_CLK}{(PSC + 1)(ARR + 1)}$$
 $$Update\_event=\dfrac{64.000.000}{(24 + 1)(57.599 + 1)}=\dfrac{400}{9}Hz$$
 - TIM2_CH1: PA0
 - TIM2_CH2: PA1
+
+- https://github.com/v0idv0id/STM32-Scaler
