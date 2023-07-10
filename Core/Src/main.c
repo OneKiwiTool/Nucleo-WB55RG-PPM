@@ -94,19 +94,20 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
-  	HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
-  	__HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_1, 3839);
-  	    __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 3839);
-  	    HAL_Delay(5000);
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
+  __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_1, 3839);
+  __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 3839);
+  HAL_Delay(5000);
+  
 #if 1
-  	    // 1.5ms to 2.5ms
-  	    for(uint8_t i = 0; i <= 255; i++)
-  	    {
-  	    	data = 3839+ 10*i;
-  	    	__HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_1, data);
-  	    	  	    __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, data);
-  	    	  	    HAL_Delay(100);
-  	    }
+  // 1.5ms to 2.5ms
+  for(uint8_t i = 0; i <= 255; i++)
+  {
+    data = 3839+ 10*i;
+    __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_1, data);
+    __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, data);
+    HAL_Delay(100);
+  }
 #endif
 
   /* USER CODE END 2 */
